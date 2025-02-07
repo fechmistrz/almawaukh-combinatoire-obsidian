@@ -1,0 +1,62 @@
+\chapter{Rekurencje}
+
+\label{chapter_rekurencje}%
+
+% Graham, Knuth, Patashnik 1: Problemy rekurencyjne
+
+\input{problems/hanoi}
+
+% \section{Proste na płaszczyźnie} % TODO
+
+\input{problems/flavius}
+
+% liniowe rekurencje
+
+\input{liczby-specjalne/fibonacci}
+
+\input{problems/recursive}
+
+  
+
+Charalambides, strona 233-275
+
+
+
+  
+
+\begin{exercise}[krojenie pizzy]
+
+    Jaka jest maksymalna liczba obszarów, na jakie $n$ prostych może rozciąć płaszczyznę?
+
+\end{exercise}
+
+  
+
+\begin{solution}
+
+    Oznaczmy szukaną wielkość przez $L_n$.
+
+    Mamy $L_0 = 1$ oraz $L_n = L_{n-1} + n$, ponieważ zawsze możemy dołożyć nową prostą tak, by przecinała każdą poprzednią w jednym punkcie.
+
+    Rozwiązaniem tej rekurencji jest $L_n = 1 + n(n+1)/2$.
+
+\end{solution}
+
+  
+  
+
+\begin{exercise}[krojenie sera]
+
+    Jaka jest maksymalna liczba obszarów, na jakie $n$ płaszczyzn może rozciąć przestrzeń?
+
+\end{exercise}
+
+  
+
+\begin{solution}
+
+    % https://en.wikipedia.org/wiki/Cake_number
+
+    (Analogicznie do poprzedniego) mamy $P_0 = 1$ i $P_n = P_{n-1} + L_{n-1}$, czego rozwiązaniem jest $P_n = \sum_{k=0}^3 {n \choose k} = (n+1)(n^2-n+6)/6$.
+
+\end{solution}
