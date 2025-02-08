@@ -1,6 +1,6 @@
 > (LICZBY BELLA) Liczbę relacji równoważności na zbiorze $n$-elementowym oznaczamy przez $b_n$ i nazywamy $n$-tą liczbą Bella.
 
-Na przykład $b_3 = 1 + 3 + 1 = 5$, gdyż zbiór $\{1, 2, 3\}$ można podzielić na singletony ($\{1\}$, $\{2\}$, $\{3\}$), singleton i parę ($\{1\}$, $\{2, 3\}$ lub $\{2\}$, $\{1, 3\}$ lub $\{3\}, \{1, 2\}$) albo nie dzielić go wcale ($\{1, 2, 3\}$). Początkowe wyrazy tego ciągu to $$1, 1, 2, 5, 15, 52, 203, 877, 4140, ...$$Szkocki matematyk Eric Temple Bell [[Bell - The iterated exponential integers]] napisał, że liczby Bella były częstym obiektem badań i~wielokrotnie odkrywane na nowo; cytuje tam między innymi Dobińskiego, który udowodnił w~1877 roku wzór ==(WSTAW LINK DO WZORU)== o~nich. Bell nazywał je liczbami wykładniczymi, współczesna notacja $b_n$ oraz sama nazwa zostały nadane przez Beckera i~Riordana w 1948 roku na cześć nie trudno się domyślić kogo. Mamy więc kolejny przykład działania prawa eponimii Stiglera, że byty nie są nazwane na cześć tego, kto je odkrył!
+Na przykład $b_3 = 1 + 3 + 1 = 5$, gdyż zbiór $\{1, 2, 3\}$ można podzielić na singletony ($\{1\}$, $\{2\}$, $\{3\}$), singleton i parę ($\{1\}$, $\{2, 3\}$ lub $\{2\}$, $\{1, 3\}$ lub $\{3\}, \{1, 2\}$) albo nie dzielić go wcale ($\{1, 2, 3\}$). Początkowe wyrazy tego ciągu to $$1, 1, 2, 5, 15, 52, 203, 877, 4140, ...$$Szkocki matematyk Eric Temple Bell [[Bell - The iterated exponential integers]] napisał, że liczby Bella były częstym obiektem badań i~wielokrotnie odkrywane na nowo; cytuje tam między innymi Dobińskiego, który udowodnił w~1877 roku wzór (link: dbnsk) o~nich. Bell nazywał je liczbami wykładniczymi, współczesna notacja $b_n$ oraz sama nazwa zostały nadane przez Beckera i~Riordana w 1948 roku na cześć nie trudno się domyślić kogo. Mamy więc kolejny przykład działania prawa eponimii Stiglera, że byty nie są nazwane na cześć tego, kto je odkrył!
 
 Liczby Bella spełniają zależność rekurencyjną
 $$
@@ -34,7 +34,7 @@ $$
 $$
 Dostaliśmy proste równanie różniczkowe, jego rozwiązanie to funkcja $B(x) = C \exp(\exp(x))$. Z warunku początkowego obliczamy wartość stałej $C = \exp(-1)$. Patrz też http://www-groups.mcs.st-andrews.ac.uk/~pjc/Teaching/MT5821/1/l9.pdf
 
-**Wzór Dobińskiego**: $$
+**Wzór Dobińskiego** (dbnsk): $$
 \begin{equation}
 b_n = \frac 1e \sum_{r=0}^\infty \frac{r^n}{r!}.
 \end{equation}

@@ -1,9 +1,8 @@
-Do zrobienia:
-- ==https://en.wikipedia.org/wiki/Schröder_number==
-- ==https://en.wikipedia.org/wiki/Catalan_number==
-- https://en.wikipedia.org/wiki/Schröder–Hipparchus_number -> Delannoy number ? https://en.wikipedia.org/wiki/Delannoy_number
+1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, **16796**, 58786, 208012, 742900, 2674440, 9694845, 35357670, 129644790, 477638700, 1767263190, 6564120420, 24466267020, 91482563640, 343059613650, 1289904147324, 4861946401452, 18367353072152, 69533550916004, 263747951750360, 1002242216651368, 3814986502092304 ...
 
-Ciąg (liczb) Catalana został opisany po raz pierwszy w osiemnastym wieku przez Leonharda Eulera, którego interesowało, ile jest triangulacji wielokąta foremnego. Ponieważ Eugène Catalan odkrył (kiedy pracował nad wieżami Hanoi (!)), że wyrazy tego ciągu opisują liczbę wyrażeń w~nawiasach, dzisiaj nazywamy go właśnie ciągiem Catalana -- tak zasugerował John Riordan w recenzji pracy Motzkina z 1948 roku (\href{https://mathscinet.ams.org/mathscinet-getitem?mr=24411}{MR24411}).
+Ciąg (liczb) Catalana został opisany po raz pierwszy w osiemnastym wieku przez Leonharda Eulera, którego interesowało, ile jest triangulacji wielokąta foremnego.
+
+Ponieważ Eugène Catalan odkrył (kiedy pracował nad wieżami Hanoi (!)), że wyrazy tego ciągu opisują liczbę wyrażeń w~nawiasach, dzisiaj nazywamy go właśnie ciągiem Catalana -- tak zasugerował John Riordan w recenzji pracy Motzkina z 1948 roku (https://mathscinet.ams.org/mathscinet-getitem?mr=24411).
 
 Ciąg spełnia zależność rekurencyjną
 $$
@@ -54,3 +53,7 @@ $$
 % TODO: https://en.wikipedia.org/wiki/Wedderburn%E2%80%93Etherington_number
 # Do zrobienia
 Uogólnienie: https://en.wikipedia.org/wiki/Lobb_number
+Do zrobienia:
+- ==https://en.wikipedia.org/wiki/Schröder_number==
+- ==https://en.wikipedia.org/wiki/Catalan_number==
+- https://en.wikipedia.org/wiki/Schröder–Hipparchus_number -> Delannoy number ? https://en.wikipedia.org/wiki/Delannoy_number
