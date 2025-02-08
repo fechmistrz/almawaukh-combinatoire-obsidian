@@ -1,3 +1,7 @@
+
+- https://en.wikipedia.org/wiki/Stirling_numbers_of_the_first_kind
+- https://en.wikipedia.org/wiki/Stirling_numbers_of_the_second_kind
+
 %
 
   

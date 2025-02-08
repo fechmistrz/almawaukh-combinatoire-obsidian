@@ -50,19 +50,7 @@
 
   
 
-@article {dudeney1869,
 
-    AUTHOR = {Dudeney, Henry E.},
-
-    JOURNAL = {Puzzles and prizes},
-
-    NO = {124},
-
-    TITLE = {Sphinx Junior's Latest},
-
-    YEAR = {1896},
-
-}
 
   
 
@@ -96,23 +84,6 @@
 
   
 
-@article {glaisher1883,
-
-    AUTHOR = {Glaisher, James W. L.},
-
-    TITLE = {A theorem in partitions},
-
-    YEAR = {1883},
-
-    FJOURNAL = {Messenger of Mathematics},
-
-    JOURNAL = {Messenger Math.},
-
-    VOLUME = {12},
-
-    PAGES = {158-170},
-
-}
 
   
 
@@ -327,23 +298,6 @@
 
   
 
-@article {alder1979,
-
-    AUTHOR = {Alder, Henry L.},
-
-    TITLE = {The use of generating functions to discover and prove partition identities},
-
-    YEAR = {1979},
-
-    FJOURNAL = {Two-Year College Mathematics Journal},
-
-    JOURNAL = {Two-Year College Mathematics Journal},
-
-    VOLUME = {10},
-
-    PAGES = {318-329},
-
-}
 
   
 
@@ -411,15 +365,6 @@
 
   
 
-@book {lovasz1993,
-
-    AUTHOR = {Lovász, László},
-
-    TITLE = {Combinatorial Problems and Exercises},
-
-    YEAR = 1993
-
-}
 
   
 
@@ -531,15 +476,6 @@
 
   
 
-@book {charalambides2002,
-
-    AUTHOR = {Charalambides, Charalambos A.},
-
-    YEAR = {2002},
-
-    TITLE = {Enumerative combinatorics},
-
-}
 
   
 
@@ -569,31 +505,9 @@
 
   
 
-@book {aigner2007,
-
-    AUTHOR = {Aigner, Martin},
-
-    TITLE = {A course in enumeration},
-
-    PUBLISHER = {Springer},
-
-    YEAR = {2007},
-
-}
 
   
 
-@book {grahamknuthpatashnik2011,
-
-    AUTHOR = {Graham, Ronald L. and Knuth, Donald E. and Patashnik, Oren},
-
-    PUBLISHER = {PWN},
-
-    TITLE = {Matematyka konkretna},
-
-    YEAR = {2011},
-
-}
 
   
 

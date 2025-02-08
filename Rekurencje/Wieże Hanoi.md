@@ -28,7 +28,7 @@ $$
 $$
 ruchów, żeby dokonać pełnego przełożenia. Wzór znaleźli niezależnie Tat-Hung Chan \cite{chan1988} oraz Andreas Hinz \cite{hinz1989}.
 ## Uogólnione wieże Hanoi: zagadka Revego
-Henry Dudeney zapytał w listopadzie 1896 roku, ile ruchów jest potrzebnych do przeniesienia dziesięciu krążków, kiedy mamy do dyspozycji cztery zamiast trzech palików [[cytat - Henry Dudeney]]. Dwa tygodnie później podał odpowiedź: potrzeba 49 ruchów, ale ze względu na brak miejsca nie podał uzasadnienia, dlaczego właśnie tyle. Zadanie pojawiło się jeszcze raz w lekko zmienionej formie jako {zagadka Revego}  \cite{dudeney1902} i długo czekało na pełne rozwiązanie.
+Henry Dudeney zapytał w listopadzie 1896 roku, ile ruchów jest potrzebnych do przeniesienia dziesięciu krążków, kiedy mamy do dyspozycji cztery zamiast trzech palików [[Henry Dudeney - Sphinx Junior's Latest]]. Dwa tygodnie później podał odpowiedź: potrzeba 49 ruchów, ale ze względu na brak miejsca nie podał uzasadnienia, dlaczego właśnie tyle. Zadanie pojawiło się jeszcze raz w lekko zmienionej formie jako {zagadka Revego}  \cite{dudeney1902} i długo czekało na pełne rozwiązanie.
 
 Dalej referujemy artykuł Andreasa Hinza i Cirila Petra \cite{hinzpetr2016}. Zaczęło się od algorytmu podanego niezależnie w 1941 roku przez Bonniego Stewarta oraz Jamesa Frame'a \cite{stewartframe1941}: aby przenieść $n$ krążków należy najpierw przełożyć $k$ najmniejszych na drugi palik, przełożyć pozostałe $n-k$ krążków na końcowy palik nie korzystając z drugiego, wreszcie przełożyć najmniejsze krążki na końcowy palik (dla dobrze wybranego $1 \le k < n$). Mamy
 $$

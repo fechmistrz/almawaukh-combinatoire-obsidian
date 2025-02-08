@@ -11,3 +11,5 @@ Liczby Laha... % Stirling-3
 % Graham, Knuth, Patashnik 5: Współczynniki dwumianowe
 
 % Graham, Knuth, Patashnik 6: Liczby szczególne
+
+https://en.wikipedia.org/wiki/Cake_number -> rozcinanie płaszczyzny hiper

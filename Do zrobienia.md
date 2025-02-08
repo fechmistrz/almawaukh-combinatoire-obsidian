@@ -1,6 +1,4 @@
-\paragraph{Liczby Lucasa} to liczba sposobów, na jakie można wybrać podzbiór liczb $1, 2, \ldots, n$ umieszczonych na brzegu koła tak, by nie wybrać sąsiadów.
 
-\cite[przykład 2.29]{charalambides2002}
 
   
 

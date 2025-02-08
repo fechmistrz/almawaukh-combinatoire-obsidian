@@ -48,7 +48,8 @@ def print_unvisited(final_database):
         unvisited_links.extend(v["backward"])
 
     unvisited_links = collections.Counter([x for x in unvisited_links if x not in final_database.keys()])
-    logging.info(f"Next pages to be visited: {', '.join([x[0] for x in unvisited_links.most_common(10)])}")
+    mmm = {x[0]: {} for x in unvisited_links.most_common(10)}
+    logging.info(f"Next pages to be visited: {json.dumps(mmm, indent=2, ensure_ascii=False)}")
 
 logging.basicConfig(encoding="utf-8", level=logging.INFO)
 
@@ -56,12 +57,17 @@ site = pw.Site("en", "wikipedia")
 with open(sys.argv[1]) as f:
     database = json.load(f)
 
+to_delete = [k for k in database.keys() if k.startswith("-")]
+for k in to_delete:
+    database[k[1:]] = {"dead": True}
+    del database[k]
 
 for k, v in database.items():
     forward = v.get("forward", [])
     backward = v.get("backward", [])
     if forward and backward:
         continue
+        
     if v.get("dead", False):
         v["forward"] = list()
         v["backward"] = list()
