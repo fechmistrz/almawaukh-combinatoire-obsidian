@@ -1,14 +1,6 @@
-%
-
-  
-
-\subsection{Proste ciągi i ich funkcje tworzące}
-
-Poniższa lista powstała na podstawie \cite[s. 372]{grahamknuthpatashnik2011}.
+Poniższa lista powstała na podstawie [[Graham, Knuth, Patashnik - Matematyka konkretna]] s. 372.
 
 % https://tex.stackexchange.com/questions/51682/is-it-possible-to-pagebreak-aligned-equations
-
-{\allowdisplaybreaks
 $$
 \begin{alignat}{2}
 
@@ -54,114 +46,53 @@ e^z & = \sum_{n = 0}^\infty \frac{1}{n!} z^n & & = 1 + z + \frac{1}{2}z^2 + \fra
 
 \end{alignat}
 $$
-}
-
-  
-
 Mnożenie ma kilka szczególnych (i interesujących przypadków). Na przykład mnożenie funkcji tworzącej przez $1/(1-z)$ daje funkcję tworzącą dla sum częściowych wyjściowego ciągu:
 $$
 \begin{equation}
 \frac{1}{1-z} \cdot A(z) = \sum_{n = 0}^\infty \left(\sum_{k=0}^n a_k \right) z^n.
 \end{equation}
 $$
-Z taką wiedzą możemy jeszcze raz zmierzyć się z ćwiczeniem \ref{ex:sum_of_squares} (jak Wilf \cite[s. 37]{wilf1994}):
+Z taką wiedzą możemy jeszcze raz zmierzyć się z ćwiczeniem (???) (jak [[Wilf - Generatingfunctionology]] s. 37):
 
-  
+> Znaleźć wzór na sumą kwadratów pierwszych $N$ liczb naturalnych, $1^2 + 2^2 + \ldots + N^2$.
 
-\begin{exercise}
-
-    Znaleźć wzór na sumą kwadratów pierwszych $N$ liczb naturalnych, $1^2 + 2^2 + \ldots + N^2$.
-
-\end{exercise}
-
-  
-
-\begin{solution}
-
-    Ft ciągu $1, 1, 1, \ldots$ jest $1/(1-x)$, więc ft ciągu $n^2$ to dokładnie
-
-    \begin{equation}
-
-        \left(x \frac{\mathrm{d}}{\mathrm{d}x} \right)^2 \frac{1}{1-x},
-
-    \end{equation}
-
-    z czego skorzystamy szukając ft ciągu sum częściowych ciągu $n^2$.
-
-    Mamy
-
-    \begin{equation}
-
-        \frac{1}{1-x}\left(x \frac{\mathrm{d}}{\mathrm{d}x} \right)^2 \frac{1}{1-x} = \frac{x(1+x)}{(1-x)^4},
-
-    \end{equation}
-
-    współczynnik przy $x^N$ będzie sumą pierwszych $N$ kwadratów liczb naturalnych.
-
-    Ale my już wiemy, że
-
-    \begin{equation}
-
-        [x^n] \frac{1}{(1-x)^4} = {n+3 \choose 3},
-
-    \end{equation}
-
-    więc szukana suma to
-
-    \begin{equation}
-
-        {N+2 \choose 3} + {N+1 \choose 3} = \frac{1}{6} N \cdot (N+1) \cdot (2N+1).
-
-    \end{equation}
-
-\end{solution}
-
-  
-
-\begin{exercise}
-
-    Znaleźć wzór ft ciągu liczb harmonicznych $H_n = 1 + 1/2 + 1/3 + \ldots + 1/n$.
-
-\end{exercise}
-
-  
+Ft ciągu $1, 1, 1, \ldots$ jest $1/(1-x)$, więc ft ciągu $n^2$ to dokładnie
+$$
+\begin{equation}
+\left(x \frac{\mathrm{d}}{\mathrm{d}x} \right)^2 \frac{1}{1-x},
+\end{equation}
+$$
+z czego skorzystamy szukając ft ciągu sum częściowych ciągu $n^2$. Mamy
+$$
+\begin{equation}
+\frac{1}{1-x}\left(x \frac{\mathrm{d}}{\mathrm{d}x} \right)^2 \frac{1}{1-x} = \frac{x(1+x)}{(1-x)^4},
+\end{equation}
+$$
+współczynnik przy $x^N$ będzie sumą pierwszych $N$ kwadratów liczb naturalnych. Ale my już wiemy, że
+$$
+\begin{equation}
+[x^n] \frac{1}{(1-x)^4} = {n+3 \choose 3},
+\end{equation}
+$$
+więc szukana suma to
+$$
+\begin{equation}
+{N+2 \choose 3} + {N+1 \choose 3} = \frac{1}{6} N \cdot (N+1) \cdot (2N+1).
+\end{equation}
+$$
+> Znaleźć wzór ft ciągu liczb harmonicznych $H_n = 1 + 1/2 + 1/3 + \ldots + 1/n$.
 
 (Ćwiczenie ukradzione Wilfowi \cite[s. 38]{wilf1994})
 
-  
+Liczby harmoniczne są ciągiem sum częściowych ciągu $a_n = 1/n$. Pochodna ft tego ciągu to $\sum_{n=0}^\infty x^n = 1/(1-x)$, więc
+$$
+\begin{align}
+\sum_{n=1}^\infty H_n x^n = \frac{1}{1-x} \int \frac{\mathrm{d}x}{1-x} = \frac{1}{1-x} \log \frac{1}{1-x}.
+\end{align}$$
+> Niech  oznacza ciąg Fibonacciego. Pokazać, że $f_0 + f_1 + \ldots + f_n = f_{n+2} - 1$.
 
-\begin{solution}
-
-    Liczby harmoniczne są ciągiem sum częściowych ciągu $a_n = 1/n$.
-
-    Pochodna ft tego ciągu to $\sum_{n=0}^\infty x^n = 1/(1-x)$, więc
-
-    \begin{align}
-
-        \sum_{n=1}^\infty H_n x^n = \frac{1}{1-x} \int \frac{\mathrm{d}x}{1-x} = \frac{1}{1-x} \log \frac{1}{1-x}.
-
-    \end{align}
-
-\end{solution}
-
-  
-
-\begin{exercise}
-
-    Niech $f_n$ oznacza ciąg Fibonacciego.
-
-    Pokazać, że $f_0 + f_1 + \ldots + f_n = f_{n+2} - 1$.
-
-\end{exercise}
-
-  
-
-Poniższa lista powstała na podstawie \cite[s. 390]{grahamknuthpatashnik2011}.
-
-% https://tex.stackexchange.com/questions/51682/is-it-possible-to-pagebreak-aligned-equations
-
-{\allowdisplaybreaks
-
+Poniższa lista powstała na podstawie [[Graham, Knuth, Patashnik - Matematyka konkretna]] s. 390.
+$$
 \begin{align}
 
 % matematyka konkretna, 7.43
@@ -221,9 +152,4 @@ z\raisingfactorial{m} & = \sum_{n=0}^\infty \stirlingone{m}{n} \cdot z^n \\
 \frac{1-w}{\exp(wz-z) - w} & = \sum_{m=0}^\infty \sum_{n=0}^\infty \eulerone{n}{m} w^m \cdot \frac{z^n}{n!}
 
 \end{align}
-
-}
-
-  
-
-%
+$$
