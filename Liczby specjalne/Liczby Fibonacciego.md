@@ -63,9 +63,9 @@ $$
 $$
 \sum_{i=1}^{n}F_{i}^{2}=F_{n}F_{n+1}
 $$
-## Liczby Lucasa
-*Liczby Lucasa* $L_n$ to ciąg liczb naturalnych, które zliczają być-może-puste podzbiory $n$ krzeseł umieszczonych na brzegu okrągłego stołu, które nie zawierają sąsiadujących ze sobą krzeseł. Początkowe wyrazy tego ciągu to 2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199
-// ciąg z https://en.wikipedia.org/wiki/Lucas_number nie zgadza się z https://math.stackexchange.com/questions/1166269/lucas-numbers-and-fibonacci
-
 Do zrobienia
 - \cite[przykład 2.29]{charalambides2002}
+## Inne liniowe rekurencje z nazwami
+https://en.wikipedia.org/wiki/Padovan_sequence: $p_0 = p_1 = p_2 = 1$, $p_n = p_{n-2} + p_{n-3}$
+https://en.wikipedia.org/wiki/Lucas_number: $l_0 = 2, l_1 = 1$, $l_{n} = l_{n-1} + l_{n-2}$. *Liczby Lucasa* $L_n$ to ciąg liczb naturalnych, które zliczają być-może-puste podzbiory $n$ krzeseł umieszczonych na brzegu okrągłego stołu, które nie zawierają sąsiadujących ze sobą krzeseł. Początkowe wyrazy tego ciągu to 2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199. Patrz też https://math.stackexchange.com/questions/1166269/lucas-numbers-and-fibonacci
+Perrin number -> https://en.wikipedia.org/wiki/Perrin_number. *The Perrin numbers bear the same relationship to the Padovan sequence as the Lucas numbers do to the Fibonacci sequence.*

@@ -1,167 +1,92 @@
-  
+> Ile jest permutacji zbioru $n$-elementowego bez punktów stałych, czyli takich $x$, że $f(x) = x$? Takie permutacje nazywamy nieporządkami.
 
-\begin{exercise}[nieporządki]
+Nieporządki były rozpatrywane po raz pierwszy przez [[de Montmort - Essay d'analyse dur les jeux de hazard]] (który był pierwszą osobą, która nazwała trójkąt Pascala trójkątem Pascala). Liczbę nieporządków nazywa się czasem słabnią albo podsilnią, jest ich 1 ($n = 0$), 0, 1, 2, 9, 44, 265, 1\,854, 14\,833, 133\,496, 1\,334\,961, ...  (https://oeis.org/A000166). Wzór na liczbę nieporządków znaleźli około 1713 roku Pierre de Montmort oraz Nicholas Bernoulli.
 
-    Ile jest permutacji zbioru $n$-elementowego bez punktów stałych, czyli takich $x$, że $f(x) = x$?
+Rozwiązanie takie jak u [[Graham, Knuth, Patashnik - Matematyka konkretna]] s. 223-225: dla $1 \le k \le n$ niech $S_k$ oznacza zbiór permutacji takich, że $f(k) = k$. Przekrój dowolnej rodziny $i$ zbiorów $S_k$ posiada $i$ punktów stałych, więc posiada $(n-i)!$ elementów. Takich rodzin jest dokładnie ${n \choose i}$, zatem z~zasady włączeń i~wyłączeń:
+$$
+\begin{align}
 
-    Takie permutacje nazywamy nieporządkami.
+\left|\bigcup_{k=1}^n S_k\right| & = \sum_{k_1} |S_{k_1}| - \sum_{k_1 < k_2} |S_{k_1} \cap S_{k_2}| + \ldots + (-1)^{n+1} \left|\bigcap_{k=1}^n S_k\right| \\
 
-\end{exercise}
+		& = {n \choose 1} (n-1)! - {n \choose 2} (n-2)! + \ldots + (-1)^{n+1} {n \choose n} 0! \\
 
-  
+		& = \sum_{k=1}^n (-1)^{k+1} {n \choose k} (n-i)! \\
 
-Nieporządki były rozpatrywane po raz pierwszy przez Pierre'a Remonda \cite{demontmort1708} (który był pierwszą osobą, która nazwała trójkąt Pascala trójkątem Pascala).
+		& = n! \sum_{k=1}^n \frac{(-1)^{k+1}}{k!}.
 
-Liczbę nieporządków nazywa się czasem słabnią albo podsilnią, jest ich 1 ($n = 0$), 0, 1, 2, 9, 44, 265, 1\,854, 14\,833, 133\,496, 1\,334\,961, ...  (\href{https://oeis.org/A000166}{A000166} w OEIS).
+\end{align}
+$$
+Zatem wszystkich nieporządków jest
+$$
+\begin{equation}
 
-Wzór na liczbę nieporządków znaleźli około 1713 roku Pierre de Montmort oraz Nicholas Bernoulli.
+\label{eqn:derangement}%
 
-% The problem of counting derangements was first considered by Pierre Raymond de Montmort in his Essay d'analyse sur les jeux de hazard.[4] in 1708; he solved it in 1713, as did Nicholas Bernoulli at about the same time.
+!n = n! \sum_{k=0}^n \frac{(-1)^k}{k!} = \left \lfloor \frac{n! + 1}{e} \right \rfloor.
 
-  
+\qedhere
 
-\begin{solution}
+\end{equation}
+$$
+To jest inne rozwiązanie tego samego problemu. Rekurencję
+$$
+\begin{equation}
 
-    Rozwiązanie takie jak u Grahama, Knutha, Patashnika \cite[s. 223-225]{grahamknuthpatashnik2011}: dla $1 \le k \le n$ niech $S_k$ oznacza zbiór permutacji takich, że $f(k) = k$.
+n! = \sum_k {n \choose k} !(n-k)
 
-    Przekrój dowolnej rodziny $i$ zbiorów $S_k$ posiada $i$ punktów stałych, więc posiada $(n-i)!$ elementów.
+\end{equation}
+$$
+zapiszmy w postaci
+$$
+\begin{equation}
 
-    Takich rodzin jest dokładnie ${n \choose i}$, zatem z~zasady włączeń i~wyłączeń:
+1 = \sum_{k=0}^n \frac{1}{k!} \frac{!(n-k)}{(n-k)!},
 
-    % https://tex.stackexchange.com/questions/51682/is-it-possible-to-pagebreak-aligned-equations
+\end{equation}
+$$
+co po przejściu do funkcji tworzących daje
+$$
+\begin{equation}
 
-    {\allowdisplaybreaks
+\frac{1}{1-z} = e^z D(z).
 
-    \begin{align}
+\end{equation}
+$$
+Porównując współczynniki przy $z^n$ po obydwu stronach równości $D(z) = e^{-z} / (1-z)$ dostajemy znowu równanie \ref{eqn:derangement}.
 
-        \left|\bigcup_{k=1}^n S_k\right| & = \sum_{k_1} |S_{k_1}| - \sum_{k_1 < k_2} |S_{k_1} \cap S_{k_2}| + \ldots + (-1)^{n+1} \left|\bigcap_{k=1}^n S_k\right| \\
+> Ile jest permutacji alternujących, czyli permutacji $f$ zbioru $\{1, 2, \ldots, n\}$ takich, że $f(1) < f(2) > f(3) < f(4) > \ldots$?
 
-                                        & = {n \choose 1} (n-1)! - {n \choose 2} (n-2)! + \ldots + (-1)^{n+1} {n \choose n} 0! \\
+Pierwsza wersja tego akapitu powstała na podstawie [[Graham, Knuth, Patashnik - Matematyka konkretna]] s. 418, 631-632, gdzie permutacje te określa się terminem ,,rosnąco-malejące''. Później dowiedzieliśmy się, że Désiré André badał takie permutacje około 1881 roku \cite{desire1881} i dlatego powyższy problem to problem André.
 
-                                        & = \sum_{k=1}^n (-1)^{k+1} {n \choose k} (n-i)! \\
+Oznaczmy przez $a_n$ szukaną liczbę permutacji. Ciąg $a_n$ zaczyna się od 1, 1, 1, 2, 5, 16, 61, 272, 1385, 7936, 50521, 353792, ... (\href{https://oeis.org/A000111}{A000111} w OEIS). Permutacji rosnąco-malejących z~największym elementem $n$ na pozycji $2k$ jest
+$$
+\begin{equation}
 
-                                        & = n! \sum_{k=1}^n \frac{(-1)^{k+1}}{k!}.
+{n-1 \choose 2k-1} a_{2k-1} a_{n-2k}.
 
-    \end{align}
+\end{equation}
+$$
+Ponieważ permutacji rosnąco-malejących jest tyle samo, co permutacji malejąco-rosnących, to szukanych permutacji z najmniejszym elementem $1$ na pozycji $2k+1$ jest
+$$
+\begin{equation}
 
-    }
+{n-1 \choose 2k} a_{2k} a_{n-2k-1}.
 
-    Zatem wszystkich nieporządków jest
+\end{equation}
+$$
+Sumując po wszystkich możliwościach mamy
+$$
+\begin{equation}
 
-    \begin{equation}
+2A_n = \sum_k {n-1 \choose k} A_k A_{n-1-k} + 2[n=0] + [n=1].
 
-    \label{eqn:derangement}%
+\end{equation}
+$$
+Wykładnicza funkcja tworząca $A$ dla ciągu $(a_n)$ spełnia zależność $2A'(z) = A(z)^2 + 1$, mamy też warunek brzegowy $A(0) = 1$, dlatego odpowiedź brzmi
+$$
+\begin{equation}
 
-    !n = n! \sum_{k=0}^n \frac{(-1)^k}{k!} = \left \lfloor \frac{n! + 1}{e} \right \rfloor.
+A(z) = \frac{1 + \sin z}{\cos z} = \tan z + \sec z.
 
-    \qedhere
-
-    \end{equation}
-
-\end{solution}
-
-  
-
-\begin{exercise}[nieporządki]
-
-    Ile jest permutacji zbioru $n$-elementowego bez punktów stałych, czyli takich $x$, że $f(x) = x$?
-
-\end{exercise}
-
-  
-
-\begin{solution}
-
-    To jest inne rozwiązanie tego samego problemu.
-
-    Rekurencję
-
-    \begin{equation}
-
-        n! = \sum_k {n \choose k} !(n-k)
-
-    \end{equation}
-
-    zapiszmy w postaci
-
-    \begin{equation}
-
-        1 = \sum_{k=0}^n \frac{1}{k!} \frac{!(n-k)}{(n-k)!},
-
-    \end{equation}
-
-    co po przejściu do funkcji tworzących daje
-
-    \begin{equation}
-
-        \frac{1}{1-z} = e^z D(z).
-
-    \end{equation}
-
-    Porównując współczynniki przy $z^n$ po obydwu stronach równości $D(z) = e^{-z} / (1-z)$ dostajemy znowu równanie \ref{eqn:derangement}.
-
-\end{solution}
-
-  
-
-\begin{exercise}
-
-    Ile jest permutacji alternujących, czyli permutacji $f$ zbioru $\{1, 2, \ldots, n\}$ takich, że $f(1) < f(2) > f(3) < f(4) > \ldots$?
-
-\end{exercise}
-
-  
-
-Pierwsza wersja tego akapitu powstała na podstawie \cite[s. 418, 631-632]{grahamknuthpatashnik2011}, gdzie permutacje te określa się terminem ,,rosnąco-malejące''.
-
-Później dowiedzieliśmy się, że Désiré André badał takie permutacje około 1881 roku \cite{desire1881} i dlatego powyższy problem to problem André.
-
-\index[persons]{André, Désiré}%
-
-\index{problem André}%
-
-  
-
-\begin{solution}
-
-    Oznaczmy przez $a_n$ szukaną liczbę permutacji.
-
-    Ciąg $a_n$ zaczyna się od 1, 1, 1, 2, 5, 16, 61, 272, 1385, 7936, 50521, 353792, ... (\href{https://oeis.org/A000111}{A000111} w OEIS).
-
-    Permutacji rosnąco-malejących z~największym elementem $n$ na pozycji $2k$ jest
-
-    \begin{equation}
-
-        {n-1 \choose 2k-1} a_{2k-1} a_{n-2k}.
-
-    \end{equation}
-
-    Ponieważ permutacji rosnąco-malejących jest tyle samo, co permutacji malejąco-rosnących, to szukanych permutacji z najmniejszym elementem $1$ na pozycji $2k+1$ jest
-
-    \begin{equation}
-
-        {n-1 \choose 2k} a_{2k} a_{n-2k-1}.
-
-    \end{equation}
-
-    Sumując po wszystkich możliwościach mamy
-
-    \begin{equation}
-
-        2A_n = \sum_k {n-1 \choose k} A_k A_{n-1-k} + 2[n=0] + [n=1].
-
-    \end{equation}
-
-    Wykładnicza funkcja tworząca $A$ dla ciągu $(a_n)$ spełnia zależność $2A'(z) = A(z)^2 + 1$, mamy też warunek brzegowy $A(0) = 1$, dlatego odpowiedź brzmi
-
-    \begin{equation}
-
-        A(z) = \frac{1 + \sin z}{\cos z} = \tan z + \sec z.
-
-    \end{equation}
-
-\end{solution}
-
-  
-
-%
+\end{equation}
+$$

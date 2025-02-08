@@ -52,3 +52,5 @@ $$
 % TODO: https://en.wikipedia.org/wiki/Motzkin_number
 % TODO: https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Hipparchus_number
 % TODO: https://en.wikipedia.org/wiki/Wedderburn%E2%80%93Etherington_number
+# Do zrobienia
+Uogólnienie: https://en.wikipedia.org/wiki/Lobb_number

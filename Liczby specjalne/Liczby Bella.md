@@ -82,4 +82,5 @@ $$
 To jest ćwiczenie 14 u Lovásza \cite[s. 18]{lovasz1993} oraz ciągi \href{https://oeis.org/A024430}{24430}, \href{https://oeis.org/A005046}{5046} w bazie danych OEIS.
 
 ## Do zrobienia:
-wft: Charalambides, strona 198
+- wft: Charalambides, strona 198
+- https://en.wikipedia.org/wiki/Ordered_Bell_number
