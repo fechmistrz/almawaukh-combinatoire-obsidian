@@ -2,6 +2,8 @@
 
 Nieporządki były rozpatrywane po raz pierwszy przez [[de Montmort - Essay d'analyse dur les jeux de hazard]] (który był pierwszą osobą, która nazwała trójkąt Pascala trójkątem Pascala). Liczbę nieporządków nazywa się czasem słabnią albo podsilnią, jest ich 1 ($n = 0$), 0, 1, 2, 9, 44, 265, 1\,854, 14\,833, 133\,496, 1\,334\,961, ...  (https://oeis.org/A000166). Wzór na liczbę nieporządków znaleźli około 1713 roku Pierre de Montmort oraz Nicholas Bernoulli.
 
+O nieporządkach piszą też [[Charalambides - Enumerative combinatorics]]: s. 169-173. (Strona 177: permutacje bez ,,sukcesji'' czyli pary k, k+1) (patrz też notatka historyczna na s. 184) (patrz też problem 10 na s. 187 z podwójnymi kopertami)
+
 Rozwiązanie takie jak u [[Graham, Knuth, Patashnik - Matematyka konkretna]] s. 223-225: dla $1 \le k \le n$ niech $S_k$ oznacza zbiór permutacji takich, że $f(k) = k$. Przekrój dowolnej rodziny $i$ zbiorów $S_k$ posiada $i$ punktów stałych, więc posiada $(n-i)!$ elementów. Takich rodzin jest dokładnie ${n \choose i}$, zatem z~zasady włączeń i~wyłączeń:
 $$
 \begin{align}
