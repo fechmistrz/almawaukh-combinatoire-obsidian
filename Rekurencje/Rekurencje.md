@@ -1,62 +1,6 @@
-\chapter{Rekurencje}
+In [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), a **recurrence relation** is an [equation](https://en.wikipedia.org/wiki/Equation "Equation") according to which the n![{\displaystyle n}](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b)th term of a [sequence](https://en.wikipedia.org/wiki/Sequence "Sequence") of numbers is equal to some combination of the previous terms. Often, only k![{\displaystyle k}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40) previous terms of the sequence appear in the equation, for a parameter k![{\displaystyle k}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40) that is independent of n![{\displaystyle n}](https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b); this number k![{\displaystyle k}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40) is called the _order_ of the relation. If the values of the first k![{\displaystyle k}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40) numbers in the sequence have been given, the rest of the sequence can be calculated by repeatedly applying the equation.
 
-\label{chapter_rekurencje}%
+Przykłady nieliniowych - np. Catalan, silnia, 
 
-% Graham, Knuth, Patashnik 1: Problemy rekurencyjne
-
-\input{problems/hanoi}
-
-% \section{Proste na płaszczyźnie} % TODO
-
-\input{problems/flavius}
-
-% liniowe rekurencje
-
-\input{liczby-specjalne/fibonacci}
-
-\input{problems/recursive}
-
-  
-
-Charalambides, strona 233-275
-
-
-
-  
-
-\begin{exercise}[krojenie pizzy]
-
-    Jaka jest maksymalna liczba obszarów, na jakie $n$ prostych może rozciąć płaszczyznę?
-
-\end{exercise}
-
-  
-
-\begin{solution}
-
-    Oznaczmy szukaną wielkość przez $L_n$.
-
-    Mamy $L_0 = 1$ oraz $L_n = L_{n-1} + n$, ponieważ zawsze możemy dołożyć nową prostą tak, by przecinała każdą poprzednią w jednym punkcie.
-
-    Rozwiązaniem tej rekurencji jest $L_n = 1 + n(n+1)/2$.
-
-\end{solution}
-
-  
-  
-
-\begin{exercise}[krojenie sera]
-
-    Jaka jest maksymalna liczba obszarów, na jakie $n$ płaszczyzn może rozciąć przestrzeń?
-
-\end{exercise}
-
-  
-
-\begin{solution}
-
-    % https://en.wikipedia.org/wiki/Cake_number
-
-    (Analogicznie do poprzedniego) mamy $P_0 = 1$ i $P_n = P_{n-1} + L_{n-1}$, czego rozwiązaniem jest $P_n = \sum_{k=0}^3 {n \choose k} = (n+1)(n^2-n+6)/6$.
-
-\end{solution}
+https://en.wikipedia.org/wiki/Recurrence_relation
+https://en.wikipedia.org/wiki/Linear_recurrence_with_constant_coefficients

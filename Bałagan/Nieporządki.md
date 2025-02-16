@@ -58,7 +58,7 @@ Porównując współczynniki przy $z^n$ po obydwu stronach równości $D(z) = e^
 
 > Ile jest permutacji alternujących, czyli permutacji $f$ zbioru $\{1, 2, \ldots, n\}$ takich, że $f(1) < f(2) > f(3) < f(4) > \ldots$?
 
-Pierwsza wersja tego akapitu powstała na podstawie [[Graham, Knuth, Patashnik - Matematyka konkretna]] s. 418, 631-632, gdzie permutacje te określa się terminem ,,rosnąco-malejące''. Później dowiedzieliśmy się, że Désiré André badał takie permutacje około 1881 roku \cite{desire1881} i dlatego powyższy problem to problem André.
+Pierwsza wersja tego akapitu powstała na podstawie [[Graham, Knuth, Patashnik - Matematyka konkretna]] s. 418, 631-632, gdzie permutacje te określa się terminem ,,rosnąco-malejące''. Później dowiedzieliśmy się, że Désiré André badał takie permutacje około 1881 roku \cite{desire1881} i dlatego powyższy problem to problem André. Jeszcze (dużo) później przeczytaliśmy o tym samym w Chen/Koh - permutacje oscylujące, s. 262 do 269.
 
 Oznaczmy przez $a_n$ szukaną liczbę permutacji. Ciąg $a_n$ zaczyna się od 1, 1, 1, 2, 5, 16, 61, 272, 1385, 7936, 50521, 353792, ... (\href{https://oeis.org/A000111}{A000111} w OEIS). Permutacji rosnąco-malejących z~największym elementem $n$ na pozycji $2k$ jest
 $$

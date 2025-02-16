@@ -1,0 +1,2 @@
+- 2025-02-16a https://en.wikipedia.org/wiki/History_of_combinatorics
+- 2025-02-16b https://en.wikipedia.org/wiki/Schröder–Hipparchus_number

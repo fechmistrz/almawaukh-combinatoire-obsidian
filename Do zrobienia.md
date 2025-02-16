@@ -1,4 +1,8 @@
+https://randomincategory.toolforge.org/Combinatorics?site=en.wikipedia.org
+https://randomincategory.toolforge.org/Generating_functions?site=en.wikipedia.org
 
+
+https://en.wikipedia.org/wiki/Finite_topological_space
 
   
 
@@ -49,3 +53,5 @@ Kirkman's schoolgirl problem
   
 
 Teoria Ramseya.
+
+PG(3,2) arises as the background for a solution of [Kirkman's schoolgirl problem](https://en.wikipedia.org/wiki/Kirkman%27s_schoolgirl_problem "Kirkman's schoolgirl problem")

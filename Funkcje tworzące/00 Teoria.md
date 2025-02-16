@@ -105,3 +105,5 @@ Funkcje tworzące momenty: Charalambides, s. 215
 Historia: Charalambides, strona 223
 % wykładnicze
 % ft momenty
+
+https://en.wikipedia.org/wiki/Generating_function - przeglądać regularnie
